@@ -1,0 +1,124 @@
+<template>
+    <div class="bg-[#f1f1f1] h-screen mb-[3rem]">
+        <Navbar/>
+         <div class="flex grid grid-cols-2 p-2 justify-center mt-4">
+            <router-link to="/komunitiMaklumat">
+                <div class="p-[0.5rem] max-w-sm ">
+                    <div class="flex rounded-lg  bg-[#E0E0E0] h-[3rem] p-3 flex-col">
+                        <div class=" items-center justify-center mb-3 ">
+                            <h2 class="  text-[#000] text-center text-md font-bold">Maklumat Asas</h2>
+                        </div>
+                    </div>
+                </div>
+                </router-link>
+            <router-link to="/laporan">
+            <div class="p-[0.5rem] max-w-sm ">
+                <div class="flex rounded-lg  bg-[#E0E0E0] h-[3rem] p-3 flex-col">
+                    <div class=" items-center justify-center mb-3 ">
+                        <h2 class="  text-[#000] text-center text-md font-bold"> Laporan</h2>
+                    </div>
+                </div>
+            </div>
+            </router-link>
+             <router-link to="#">
+             <div class="p-[0.5rem] max-w-sm  ml-[5rem] -mr-[5rem] ">
+                <div class="flex rounded-lg  bg-[#781E2A] h-[3rem] p-3 flex-col">
+                    <div class=" items-center justify-center mb-3 ">
+                       
+                        <h2 class="text-[#fff] text-center text-md font-bold">Status</h2>
+                    </div>
+                </div>
+            </div>
+        </router-link>
+        
+        </div>
+
+        <!-- steps -->
+        <section class="text-gray-600 body-font mb-[5rem]">
+           
+            <div class="container px-5 py-5 mx-auto flex flex-wrap">
+                <h2 class="  text-[#781E2A] text-center mb-5 text-lg font-bold"> Status Projek</h2>
+              <div class="flex flex-wrap w-full pl-5" >
+                <div class="lg:w-2/5 md:w-1/2 md:pr-10 md:py-6">
+                  <div class="flex relative pb-5">
+                    <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                      <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                    </div>
+                    <div class="flex-shrink-0 ml-2.5 w-5 h-5 rounded-full bg-[#2ACD61] inline-flex items-center justify-center text-white  z-10">
+                     
+                    </div>
+                    <div class="flex-grow pl-4">
+                      <h2 class="font-medium title-font text-md font-bold text-gray-900 mb-1 tracking-wider">Peserta</h2>
+                      <p class="leading-relaxed text-sm">Status: Belum Selesai</p>
+                    </div>
+                  </div>
+                  <div class="flex sticky pb-5">
+                    <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                      <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                    </div>
+                    <div class="flex-shrink-0 ml-2.5 w-5 h-5 rounded-full bg-[#2ACD61] inline-flex items-center justify-center text-white  z-10">
+                     </div>
+                     <div class="flex-grow pl-4">
+                        <h2 class="font-medium title-font text-md font-bold text-gray-900 mb-1 tracking-wider">Peserta</h2>
+                        <p class="leading-relaxed text-sm">Status: Belum Selesai</p>
+                      </div>
+                  </div>
+                  <div class="flex sticky pb-5">
+                    <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                      <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                    </div>
+                    <div class="flex-shrink-0 ml-2.5 w-5 h-5 rounded-full bg-[#2ACD61] inline-flex items-center justify-center text-white  z-10">
+                     
+                    </div>
+                    <div class="flex-grow pl-4">
+                        <h2 class="font-medium title-font text-md font-bold text-gray-900 mb-1 tracking-wider">Peserta</h2>
+                        <p class="leading-relaxed text-sm">Status: Belum Selesai</p>
+                      </div>
+                  </div>
+                  <div class="flex sticky pb-5">
+                    <div class="h-full w-10 absolute inset-0 flex items-center justify-center">
+                      <div class="h-full w-1 bg-gray-200 pointer-events-none"></div>
+                    </div>
+                    <div class="flex-shrink-0 ml-2.5 w-5 h-5 rounded-full bg-[#2ACD61] inline-flex items-center justify-center text-white  z-10">
+                      
+                    </div>
+                    <div class="flex-grow pl-4">
+                        <h2 class="font-medium title-font text-md font-bold text-gray-900 mb-1 tracking-wider">Peserta</h2>
+                        <p class="leading-relaxed text-sm">Status: Belum Selesai</p>
+                      </div>
+                  </div>
+                  <div class="flex sticky">
+                    <div class="flex-shrink-0 ml-2.5 w-5 h-5 rounded-full bg-[#CD352A] inline-flex items-center justify-center text-white  z-10">
+                      
+                    </div>
+                    <div class="flex-grow pl-4">
+                        <h2 class="font-medium title-font text-md font-bold text-gray-900 mb-1 tracking-wider">Peserta</h2>
+                        <p class="leading-relaxed text-sm">Status: Belum Selesai</p>
+                      </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+     <Footer/>
+    </div>
+</template>
+
+<script>
+import Navbar from '@/components/Navbar.vue'
+import Footer from '@/components/Footer.vue';
+// import KomunitiTab from '@/components/KomunitiTab.vue';
+    export default {
+        name:'kom-laporan',
+        components:{
+            Navbar,
+            Footer,
+            // KomunitiTab
+        }
+        
+    }
+</script>
+
+<style lang="scss" scoped>
+
+</style>

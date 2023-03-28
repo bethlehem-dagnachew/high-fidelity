@@ -1,8 +1,15 @@
 import { createRouter, createWebHashHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import Login from '../views/Login'
-import Komuniti from '../views/Komuniti'
-
+import KomunitiMaklumat from '../views/komunit/KomunitiMaklumat'
+import Laporan from '../views/komunit/Laporan'
+import Status from '../views/komunit/Status'
+import Test from '../views/Test'
+import LaporanHarian from '../views/komunit/laporan/LaporanHarian'
+import LaporanCashflow from '../views/komunit/laporan/LaporanCashflow'
+import LaporanStok from '../views/komunit/laporan/LaporanStok'
+import LaporanBulanan from '../views/komunit/laporan/LaporanBulanan'
+import HomeAdmin from '../views/admin/Home'
 const routes = [
   {
     path: '/',
@@ -15,9 +22,49 @@ const routes = [
     component: Login
   },
   {
-    path: '/komuniti',
-    name: 'Komuniti',
-    component: Komuniti
+    path: '/komunitiMaklumat',
+    name: 'KomunitiMaklumat',
+    component: KomunitiMaklumat
+  },
+  {
+    path: '/laporan',
+    name: 'Laporan',
+    component: Laporan
+  },
+  {
+    path: '/status',
+    name: 'Status',
+    component: Status
+  },
+  {
+    path: '/laporanHarian',
+    name: 'LaporanHarian',
+    component: LaporanHarian
+  },
+  {
+    path: '/laporanCashflow',
+    name: 'LaporanCashflow',
+    component: LaporanCashflow
+  },
+  {
+    path: '/laporanStok',
+    name: 'LaporanStok',
+    component: LaporanStok
+  },
+  {
+    path: '/laporanBulanan',
+    name: 'LaporanBulanan',
+    component: LaporanBulanan
+  },
+  {
+    path: '/homeAdmin',
+    name: 'HomeAdmin',
+    component: HomeAdmin
+  },
+  {
+    path: '/test',
+    name: 'Test',
+    component: Test
   },
   {
     path: '/about',

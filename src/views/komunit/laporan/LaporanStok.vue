@@ -45,16 +45,8 @@
               >Tarikh</span
             >
           </div>
-          <select
-            id="countries"
-            class="py-4 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 shadow-xl"
-          >
-            <option selected>Choose a country</option>
-            <option value="US">United States</option>
-            <option value="CA">Canada</option>
-            <option value="FR">France</option>
-            <option value="DE">Germany</option>
-          </select>
+          <input class="py-4 px-4 block w-full border-gray-200 rounded-xl text-sm focus:border-blue-500 focus:ring-blue-500 shadow-xl" type="date"/>
+
         </div>
         <div class="max-w-sm">
           <div class="flex item-start text-left">

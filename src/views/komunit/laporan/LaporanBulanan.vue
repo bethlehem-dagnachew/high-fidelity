@@ -1,5 +1,5 @@
 <template>
-    <div class="bg-[#f1f1f1]  ">
+    <div class="bg-[#f1f1f1] h-screen mb-[4rem] ">
       <Navbar />
       <div class="flex grid grid-cols-2 p-2 justify-center mt-4">
         <router-link to="/komunitiMaklumat">
@@ -45,27 +45,31 @@
               >Bulan</span
             >
           </div>
-          <select
-            id="countries"
-            class="py-4 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 shadow-xl"
-          >
-            <option selected>Sila Pilih</option>
-            <option value="01">January</option>
-            <option value="02">February</option>
-            <option value="03">March</option>
-            <option value="04">April</option>
-            <option value="05">May</option>
-            <option value="06">June</option>
-            <option value="07">July</option>
-            <option value="08">August</option>
-            <option value="09">September</option>
-            <option value="10">October</option>
-            <option value="11">November</option>
-            <option value="12">December</option>
-          </select>
+
+          <!-- select -->
+          <select class="py-4 px-4 block w-full border-gray-200 rounded-lg text-sm focus:border-blue-500 focus:ring-blue-500 shadow-xl" v-model="form.category" name="make" >
+              <option value="" disabled selected>Bulan Pilih</option>
+              <option v-for="option in makes_options" v-bind:value="option.text" v-bind:key="option.text" >
+                {{ option.text }}
+              </option>
+            </select>
+            <router-link to="/datebulan">
+            <div class="w-[20rem]" >
+              <div class=" py-4">
+                <div class="font-normal text-md mb-2 py-2 px-2 rounded-lg w-[20rem] bg-white shadow-lg" v-for="option in model_options[form.category]"
+                v-bind:value="option.text"
+                v-bind:key="option.text"
+              >
+                {{ option.text }}</div>
+              </div>
+            </div>
+          </router-link>
+         
         </div>
         
+        
       </div>
+      
       
   
       <Footer />
@@ -79,6 +83,132 @@
   // import KomunitiTab from '@/components/KomunitiTab.vue';
   export default {
     name: "kom-laporan",
+    data() {
+      return{
+        form: {
+        category: "",
+        subCategory: "",
+      },
+      
+
+        makes_options: [
+        { text: "January", id: 1 },
+        { text: "February", id: 2 },
+        { text: "March", id: 3 },
+        { text: "April", id: 4 },
+        { text: "May", id: 5 },
+        { text: "June", id: 6 },
+        { text: "July", id: 7 },
+        { text: "August", id: 8 },
+        { text: "September", id: 9 },
+        { text: "October", id: 10 },
+        { text: "November", id: 11 },
+        { text: "December", id: 12 },
+      ],
+      model_options: {
+        January: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        February: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        March: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        April: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        May: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        June: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        July: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        August: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        September: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        October: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        November: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+        December: [
+          { text: "1/07/2023", id: 1 },
+          { text: "2/07/2023", id: 2 },
+          { text: "3/07/2023", id: 3 },
+          { text: "4/07/2023", id: 4 },
+          { text: "5/07/2023", id: 5 },
+          { text: "6/07/2023", id: 6 },
+        ],
+       
+      
+    
+    }
+      }
+   
+  },
     components: {
       Navbar,
       Footer,

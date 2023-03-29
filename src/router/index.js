@@ -10,6 +10,8 @@ import LaporanCashflow from '../views/komunit/laporan/LaporanCashflow'
 import LaporanStok from '../views/komunit/laporan/LaporanStok'
 import LaporanBulanan from '../views/komunit/laporan/LaporanBulanan'
 import HomeAdmin from '../views/admin/Home'
+import Datebulan from '../views/komunit/bulan/Datebulan'
+import BulanaHasil from '../views/komunit/bulan/BulanaHasil'
 const routes = [
   {
     path: '/',
@@ -60,6 +62,16 @@ const routes = [
     path: '/homeAdmin',
     name: 'HomeAdmin',
     component: HomeAdmin
+  },
+  {
+    path: '/datebulan',
+    name: 'Datebulan',
+    component: Datebulan
+  },
+  {
+    path: '/bulanaHasil',
+    name: 'BulanaHasil',
+    component: BulanaHasil
   },
   {
     path: '/test',

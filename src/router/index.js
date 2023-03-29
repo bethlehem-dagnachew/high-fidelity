@@ -14,9 +14,16 @@ import Datebulan from '../views/komunit/bulan/Datebulan'
 import BulanaHasil from '../views/komunit/bulan/BulanaHasil'
 import Notifikasi from '../views/admin/notfication/Notifikasi'
 import Tugasan from '../views/admin/notfication/Tugasan'
+import Carian from '../views/admin/carian/Carian'
+import CarianDetail from '../views/admin/carian/CarianDetail'
+import StatusProjek from '../views/admin/StatusProjek'
+import Lawatan from '../views/admin/lawatan/Lawatan'
+import QRresultDetail from '../views/admin/carian/QRresultDetail'
+import QRcodeResult from '../views/admin/carian/QRcodeResult'
+import QRcode from '../views/admin/carian/QRcode'
 const routes = [
   {
-    path: '/',
+    path: '/home',
     name: 'home',
     component: HomeView
   },
@@ -61,7 +68,7 @@ const routes = [
     component: LaporanBulanan
   },
   {
-    path: '/homeAdmin',
+    path: '/',
     name: 'HomeAdmin',
     component: HomeAdmin
   },
@@ -84,6 +91,42 @@ const routes = [
     path: '/tugasan',
     name: 'Tugasan',
     component: Tugasan
+  },
+  {
+    path: '/carian',
+    name: 'Carian',
+    component: Carian
+  },
+  {
+    path: '/carianDetail',
+    name: 'CarianDetail',
+    component: CarianDetail
+  },
+  {
+    path: '/statusProjek',
+    name: 'StatusProjek',
+    component: StatusProjek
+  },
+  {
+    path: '/lawatan',
+    name: 'Lawatan',
+    component: Lawatan
+  },
+
+  {
+    path: '/QRcode',
+    name: 'QRcode',
+    component: QRcode
+  },
+  {
+    path: '/QRcodeResult',
+    name: 'QRcodeResult',
+    component: QRcodeResult
+  },
+  {
+    path: '/QRresultDetail',
+    name: 'QRresultDetail',
+    component: QRresultDetail
   },
   {
     path: '/test',

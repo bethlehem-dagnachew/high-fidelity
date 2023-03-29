@@ -12,7 +12,7 @@
             </div>
             </router-link>
     
-             <router-link to="/">
+             <router-link to="#">
                 <div class="p-[0.5rem] max-w-sm ">
                     <div class="flex rounded-lg  bg-[#E0E0E0] h-[3rem] p-3 flex-col">
                         <div class=" items-center justify-center mb-3 ">
@@ -24,7 +24,7 @@
         
         </div>
 
-
+<router-link to="/tugasan">
 <div class="max-w-sm ml-4 mr-4 p-5 mb-5 pt-1 bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
    
         <div class="container flex flex-wrap items-center justify-between mx-auto">
@@ -34,6 +34,7 @@
     <p class="mb-3 font-normal text-sm text-black ">Contoh Tugasan yang belum dibaca dan belum diselesaikan. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In efficitur turpis vitae metus auctor ornare quis in mi. Suspendisse nec venenatis enim.</p>
    
 </div>
+</router-link>
 <div class="max-w-sm ml-4 mr-4 p-5 pt-1 mb-5 bg-white border border-gray-200 rounded-lg shadow-xl dark:bg-gray-800 dark:border-gray-700">
    
     <div class="container flex flex-wrap items-center justify-between mx-auto">

@@ -9,16 +9,19 @@
   },
   "dependencies": {
     "@capacitor/android": "^4.7.1",
+    "@capacitor/camera": "^4.1.4",
     "@capacitor/cli": "^4.7.1",
     "@capacitor/core": "^4.7.1",
     "@capacitor/ios": "^4.7.1",
     "core-js": "^3.8.3",
     "flowbite": "^1.6.4",
     "flowbite-datepicker": "^1.2.2",
+    "tailwind-dropdown-vue": "^1.0.9",
     "vue": "^3.2.13",
     "vue-flatpickr-component": "^11.0.3",
     "vue-router": "^4.0.3",
     "vue3-datepicker": "^0.3.4",
+    "vue3-qrcode-reader": "0.0.1",
     "vuex": "^4.0.0"
   },
   "devDependencies": {

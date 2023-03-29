@@ -12,6 +12,8 @@ import LaporanBulanan from '../views/komunit/laporan/LaporanBulanan'
 import HomeAdmin from '../views/admin/Home'
 import Datebulan from '../views/komunit/bulan/Datebulan'
 import BulanaHasil from '../views/komunit/bulan/BulanaHasil'
+import Notifikasi from '../views/admin/notfication/Notifikasi'
+import Tugasan from '../views/admin/notfication/Tugasan'
 const routes = [
   {
     path: '/',
@@ -72,6 +74,16 @@ const routes = [
     path: '/bulanaHasil',
     name: 'BulanaHasil',
     component: BulanaHasil
+  },
+  {
+    path: '/notifikasi',
+    name: 'Notifikasi',
+    component: Notifikasi
+  },
+  {
+    path: '/tugasan',
+    name: 'Tugasan',
+    component: Tugasan
   },
   {
     path: '/test',

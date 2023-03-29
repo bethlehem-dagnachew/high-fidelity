@@ -8,7 +8,7 @@
                 <div class=" items-center justify-center mb-3 ">
                     <div
                         class="w-16 h-16 mb-5 inline-flex items-center justify-center text-white flex-shrink-0">
-                       <img class="object-center ml-[4rem] " src="@/assets/image/bell.png"/>
+                       <img class="object-center ml-[2rem] " src="@/assets/image/bell.png"/>
                     </div>
                     <h2 class="text-[#781E2A] text-center text-lg font-medium">Notifikasi</h2>
                 </div>
@@ -23,7 +23,7 @@
                 <div class=" items-center justify-center mb-3 ">
                     <div
                     class="w-16 h-16 mb-5 inline-flex items-center justify-center text-white flex-shrink-0">
-                   <img class="object-center ml-[4rem] " src="@/assets/image/global-search.png"/>
+                   <img class="object-center ml-[2rem] " src="@/assets/image/global-search.png"/>
                 </div>
                     <h2 class="text-[#781E2A] text-center text-sm font-bold">Carian Projek</h2>
                 </div>
@@ -38,7 +38,7 @@
                 <div class=" items-center justify-center mb-3 ">
                     <div
                     class="w-16 h-16 mb-5 inline-flex items-center justify-center text-white flex-shrink-0">
-                   <img class="object-center ml-[4rem] " src="@/assets/image/earth-globe.png"/>
+                   <img class="object-center ml-[2rem] " src="@/assets/image/earth-globe.png"/>
                 </div>
                     <h2 class="text-[#781E2A] text-center text-md font-bold">Lawatan</h2>
                 </div>
@@ -53,7 +53,7 @@
                 <div class=" items-center justify-center mb-3 ">
                     <div
                         class="w-16 h-16 mb-5 inline-flex items-center justify-center text-white flex-shrink-0">
-                       <img class="object-center ml-[4rem] " src="@/assets/image/sticky-notes.png"/>
+                       <img class="object-center ml-[2rem] " src="@/assets/image/sticky-notes.png"/>
                     </div>
                     <h2 class="text-[#781E2A] text-center text-md font-bold">Status</h2>
                 </div>

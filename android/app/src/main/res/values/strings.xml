@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">high-fidelity</string>
+    <string name="title_activity_main">high-fidelity</string>
+    <string name="package_name">com.hign.fidelity</string>
+    <string name="custom_url_scheme">com.hign.fidelity</string>
+</resources>

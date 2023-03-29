@@ -1,0 +1,6 @@
+{
+  "appId": "com.hign.fidelity",
+  "appName": "high-fidelity",
+  "webDir": "dist",
+  "bundledWebRuntime": false
+}

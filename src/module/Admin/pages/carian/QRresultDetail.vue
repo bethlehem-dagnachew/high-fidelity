@@ -54,9 +54,9 @@
   <script>
 import NavCarian from "@/components/NavCarian.vue";
 import Footer from "@/components/Footer.vue";
-import FirstDropdown from '@/components/admin/carian/FirstDropdown.vue';
-import SecondDropDown from "@/components/admin/carian/SecondDropDown.vue";
-import ThiredDropdown from "@/components/admin/carian/ThiredDropdown.vue";
+import FirstDropdown from '../../components/carian/FirstDropdown.vue';
+import SecondDropDown from "../../components/carian/SecondDropDown.vue";
+import ThiredDropdown from "../../components/carian/ThiredDropdown.vue";
 
 export default {
   name: "carian-page",

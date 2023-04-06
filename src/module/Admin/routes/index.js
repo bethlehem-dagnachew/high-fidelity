@@ -16,42 +16,50 @@ const AdminRoutes =[
     {
         path: '/QRcode',
         name: 'QRcode',
-        component: QRcode
+        component: QRcode,
+        meta: { requiresAuth: true }
       },
       {
         path: '/QRcodeResult',
         name: 'QRcodeResult',
-        component: QRcodeResult
+        component: QRcodeResult,
+        meta: { requiresAuth: true }
       },
       {
         path: '/QRresultDetail',
         name: 'QRresultDetail',
-        component: QRresultDetail
+        component: QRresultDetail,
+        meta: { requiresAuth: true }
       },
       {
         path: '/carian',
         name: 'Carian',
-        component: Carian
+        component: Carian,
+        meta: { requiresAuth: true }
       },
       {
         path: '/carianDetail',
         name: 'CarianDetail',
-        component: CarianDetail
+        component: CarianDetail,
+        meta: { requiresAuth: true }
       },
       {
         path: '/lawatan',
         name: 'Lawatan',
-        component: Lawatan
+        component: Lawatan,
+        meta: { requiresAuth: true }
       },
       {
         path: '/notifikasi',
         name: 'Notifikasi',
-        component: Notifikasi
+        component: Notifikasi,
+        meta: { requiresAuth: true }
       },
       {
         path: '/tugasan',
         name: 'Tugasan',
-        component: Tugasan
+        component: Tugasan,
+        meta: { requiresAuth: true }
       },
 ]
 export {AdminRoutes}

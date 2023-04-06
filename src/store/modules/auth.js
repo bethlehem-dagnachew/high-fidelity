@@ -28,27 +28,27 @@ const mutations = {
     //   },
 };
 const actions = {
-    Register({dispatch}, form) {
-        return new Promise((resolve, reject) => {
-            api.request().post("/auth/signup", form)
-                .then((response) => {                     
-                    dispatch("");
+    // Register({dispatch}, form) {
+    //     return new Promise((resolve, reject) => {
+    //         api.request().post("/auth/signup", form)
+    //             .then((response) => {                     
+    //                 dispatch("");
                     
-                    resolve(response.data.token);
-                    resolve(true);
-                }).catch((error) => {
-                    console.log(error)
-                    reject(error);
-                })
-        })
-    },
+    //                 resolve(response.data.token);
+    //                 resolve(true);
+    //             }).catch((error) => {
+    //                 console.log(error)
+    //                 reject(error);
+    //             })
+    //     })
+    // },
 
     LogIn({ commit }, User) {
         return new Promise((resolve, reject) => {
-            api.request().post("/auth/login", User)
+            api.request().post("/login", User)
                 .then((response) => { 
                     console.log(response.data)
-                    commit("setUser", User.get("phone_number"));
+                    commit("setUser", User.get("email"));
                     commit("setToken", response.data.token);
                     resolve(true);
                    

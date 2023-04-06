@@ -39,7 +39,7 @@
 // import Profile from '@/components/home/Profile.vue';
 import CardsHome from "@/components/home/CardsHome.vue";
 import Footer from "@/components/Footer.vue";
-
+import api from '@/services/api'
 export default {
   components: {
     // Profile,
@@ -51,8 +51,7 @@ export default {
     },
   methods: {
     getData() {
-      api
-        .request({ auth: true })
+      api.request({ auth: true })
         .get(`/home`)
         .then((response) => {
           this.home = response.data;

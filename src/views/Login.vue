@@ -9,12 +9,13 @@
               <div class=" tracking-wide text-5xl text-white font-semibold">Selamat Datang</div>
               <div class=" tracking-wide text-sm mt-5 text-white ">Program Pembangunan Peneroka (ppp)</div>
             </div>
-            <form>
+            <form >
               
               <!-- Email input -->
               <div class="relative mb-6 ml-6 mr-6" data-te-input-wrapper-init>
                 <input
-                  type="number"
+                  type="text"
+                  v-model="email"
                   class="peer block min-h-[auto] w-full h-[3.8rem] rounded border-0 py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="exampleFormControlInput2"
                   placeholder="Nombor ID"
@@ -30,6 +31,7 @@
               <div class="relative mb-6 ml-6 mr-6" data-te-input-wrapper-init>
                 <input
                   type="password"
+                  v-model="password"
                   class="peer block min-h-[auto] w-full h-[3.8rem] rounded border-0 py-[0.32rem] px-3 leading-[2.15] outline-none transition-all duration-200 ease-linear focus:placeholder:opacity-100 data-[te-input-state-active]:placeholder:opacity-100 motion-reduce:transition-none dark:text-neutral-200 dark:placeholder:text-neutral-200 [&:not([data-te-input-placeholder-active])]:placeholder:opacity-0"
                   id="exampleFormControlInput22"
                   placeholder="Kata Laluan"
@@ -65,6 +67,7 @@
                   class="inline-block w-full h-[3.2rem] text-center justify-center rounded-full bg-gradient-to-r from-[#CACACA] via-[#FFFFFF] to-[#CACACA] px-7 pt-3 pb-2.5 text-sm font-medium leading-normal text-[#781E2A] shadow-[0_4px_9px_-4px_#3b71ca] transition duration-150 ease-in-out hover:bg-primary-600 hover:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:bg-primary-600 focus:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)] focus:outline-none focus:ring-0 active:bg-primary-700 active:shadow-[0_8px_9px_-4px_rgba(59,113,202,0.3),0_4px_18px_0_rgba(59,113,202,0.2)]"
                   data-te-ripple-init
                   data-te-ripple-color="light"
+                  @click="submit"
                 >
                   Log Masuk
                 </button>
@@ -79,8 +82,41 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "login-page",
+  data() {
+    return {
+      
+        email:null,
+        password:null
+   
+      
+    };
+  },
+  methods:{
+    ...mapActions("auth", {
+      loginUser: "LogIn",
+    }),
+    submit() {
+      const User = new FormData();
+      User.append("email", this.email)
+      User.append("password", this.password)
+      this.loginUser(User)
+        .then((loggedIn) => {
+          console.log(loggedIn);
+          
+          if (loggedIn) {
+             this.$router.push("/"); 
+          }
+
+        })
+        .catch((error) => {
+          console.log(error.response.data.error);
+          this.errors = [error.response.data.message];
+        });
+    },
+  }
 };
 </script>
 
